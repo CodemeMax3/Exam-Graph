@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { LayoutDashboard, BookOpen, Users, GitBranch, CalendarDays, Download, Settings, Plus, Trash2, Upload, Play, RefreshCw, CheckCircle2, AlertCircle, Clock3, GraduationCap, FileText, ChevronRight, Menu, X } from "lucide-react";
 
-const API = "http://127.0.0.1:5000/api";
+const API = "https://exam-graph.onrender.com/api";
 function downloadTimetablePDF(data){
   if(!data.timetable?.length){window.alert("Generate a timetable before exporting the PDF.");return;}
   const esc=(value)=>String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","\'":"&#39;"}[ch]));
